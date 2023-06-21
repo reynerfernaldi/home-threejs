@@ -1,0 +1,11 @@
+body {
+  background-color: #000000;
+}
+
+#three-canvas-container {
+  height: 100vh !important;
+  width: 100%;
+  top: 0 !important;
+  bottom: 0 !important;
+  position: absolute;
+}

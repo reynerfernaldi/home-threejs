@@ -1,0 +1,41 @@
+{
+  "name": "three-world",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@react-three/cannon": "6.4.0",
+    "@react-three/drei": "9.31.2",
+    "@react-three/fiber": "8.7.4",
+    "axios": "^1.2.0",
+    "cannon": "^0.6.2",
+    "gltf-pipeline": "^3.0.5",
+    "gltfjsx": "^5.0.2",
+    "gsap": "^3.11.3",
+    "leva": "^0.9.34",
+    "nice-color-palettes": "^2.0.0",
+    "react": "^18.2.0",
+    "react-countdown": "^2.3.5",
+    "react-dom": "^18.2.0",
+    "react-three-fiber": "5.3.10",
+    "styled-components": "5.2.1",
+    "suncalc": "^1.9.0",
+    "three": "^0.146.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.7",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "vite": "^3.2.0"
+  },
+  "description": "# Repo ini lanjutan dari Project [three-world](https://github.com/storyofhis/three-world)",
+  "main": "vite.config.js",
+  "author": "",
+  "license": "ISC"
+}
