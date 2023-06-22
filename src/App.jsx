@@ -9,7 +9,7 @@ import BaseScene from "./ui/BaseScene";
 import ThreeModel from "./component/ThreeModel";
 import BaseCharacter from "./ui/BaseCharacter";
 import Rumah from "./component/Home/Rumah";
-import Sun from "./component/Sun/Sun1";
+import Sun from "./component/Sun/Sun";
 import Lampu from "./component/Lampu";
 import Garden from "./component/French_chateau";
 import Rock from "./component/Rock";
@@ -55,6 +55,7 @@ function App(props) {
   console.log(position_x + " " + position_y + " " + position_z);
 
   const positionSun = [-position_x, position_y, position_z];
+  const positionMoon = [-position_x+100, position_y, position_z];
   
   return (
       <>
@@ -66,12 +67,12 @@ function App(props) {
           <ThreeModel args={[0.5, 2, 0.5]} scale={0.5} position={[-3, 0, 20]} />
           <ThreeModel args={[0.5, 2, 0.5]} scale={0.5} position={[3, 0, 20]} />
           {position_xSunset >= position_x && position_ySunset <= position_y && position_zSunset >= position_z ? 
-          (<Sun args={[0.2, 2, 0.2]} scale={0.7} position={[-position_x, position_y, position_z]}/>) :
-          (<Moon args={[0.2, 2, 0.2]} scale={0.005} position={[-position_x+100, position_y, position_z]}/>)
+          (<Sun args={[0.2, 2, 0.2]} scale={0.08} position={[-position_x, position_y, position_z]}/>) :
+          (<Moon args={[0.2, 2, 0.2]} scale={0.001} position={[-position_x+100, position_y, position_z]}/>)
           }
           {position_xSunset >= position_x && position_ySunset <= position_y && position_zSunset >= position_z ? 
           (<Sky distance={450000} azimuth={1} />) :
-          (<pointLight args={["#ffffff", 2]} position={positionSun} />)
+          (<directionalLight args={["#ffffff", 2]} position={positionMoon} />)
           }
           <Lampu args={[0.5, 2, 0.5]} scale={0.5} position={[4, 0.05, 13]} />
           <Lampu args={[0.5, 2, 0.5]} scale={0.5} position={[-3, 0.05, 13]} />

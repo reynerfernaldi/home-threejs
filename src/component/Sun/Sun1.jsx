@@ -60,13 +60,13 @@ export default function Model(props, { ...box }) {
                   <mesh name="UnstableStarCore_1_0" geometry={nodes.UnstableStarCore_1_0.geometry} material={materials.material} />
                   {/* <sphereGeometry args={[0.5, 32, 32]} />
                   <meshStandardMaterial metalness={0.6} roughness={0.2} /> */}
-                  <pointLight args={["#ffffff", 2]} position={position} />
+                  <directionalLight args={["#ffffff", 2]} position={position} />
                 </group>
                 <group name="UnstableStarref" rotation={[-Math.PI / 2, 0, 0]} scale={1}>
                   <mesh name="UnstableStarref_2_0" geometry={nodes.UnstableStarref_2_0.geometry} material={materials.material_1} />
                   {/* <sphereGeometry args={[0.5, 32, 32]} />
                   <meshStandardMaterial metalness={0.6} roughness={0.2} /> */}
-                  <pointLight args={["#ffffff", 2]} position={position} />
+                  <directionalLight args={["#ffffff", 2]} position={position} />
                 </group>
               </group>
             </group>
