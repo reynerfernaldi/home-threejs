@@ -9,37 +9,11 @@ title: Sun
 import React, { useRef } from "react";
 import { useBox } from "@react-three/cannon";
 import { useGLTF, useAnimations, Sparkles } from "@react-three/drei";
-// import sunCalc from "suncalc";
 
 export default function Model({ ...props }) {
   // const group = useRef();
   const { nodes, materials, animations } = useGLTF("/sun/sun.glb");
-  // const { actions } = useAnimations(animations, group);
 
-  // get today's sunlight times for surabaya
-  // const times = sunCalc.getTimes(new Date(), -7.25, 112.7688);
-
-  // // format sunrise time from the Date object
-  // const sunriseStr = times.sunrise.getHours() + ':' + times.sunrise.getMinutes();
-
-  // const location = sunCalc.getPosition(times.sunrise, -7.25, 112.7688);
-  // const location = sunCalc.getPosition(times.sunset, -7.25, 112.7688);
-  // const location = sunCalc.getPosition(new Date(), -7.25, 112.7688);
-
-  // const azimuth = (location.azimuth * 180) / Math.PI;
-  // const altitude = (location.altitude * 180) / Math.PI;
-
-  // const radius = window.innerWidth / -30;
-  // const height = window.innerHeight / 20;
-  // const theta = azimuth + 90;
-  // const delta = altitude;
-  // var apparentRadius = radius * Math.cos((delta * Math.PI) / 180);
-  // const position_x = apparentRadius * Math.cos((theta * Math.PI) / 180);
-  // const position_y = apparentRadius * Math.sin((theta * Math.PI) / 180) + height;
-  // const position_z = radius * Math.sin((delta * Math.PI) / 180);
-  // console.log(position_x + " " + position_y + " " + position_z);
-
-  // const position = [-position_x, position_y, position_z];
   const [ref] = useBox((index) => ({
     type: "Static",
     mass: 1,
